@@ -3,14 +3,11 @@ export const getFilterContacts = ({contacts, filter}) => {
     return contacts.items;
   }
   const normalizedFilter = filter.toLowerCase();
-  const filteredContacts = contacts.items.filter(({ name, number }) => {
+  const visiblePhoneList = contacts.items.filter(({ name, number }) => {
     return (
       name.toLowerCase().includes(normalizedFilter) ||
       number.includes(normalizedFilter)
     );
   });
-  return filteredContacts;
+  return visiblePhoneList;
 }
-
-
- 
