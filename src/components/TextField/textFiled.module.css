@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+grid-template-columns: 50px 1fr;
+align-items: center;
+gap: 20px;
+margin-bottom: 20px;
+}
+.label {
+  color: white;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+
+  margin-right: 20px;
+  cursor: pointer;
+}
+.label:focus,
+.label:hover {
+  color: red;
+}
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid red;
+  padding: 5px;
+  margin-left: 20px;
+
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  color: #fff;
+}

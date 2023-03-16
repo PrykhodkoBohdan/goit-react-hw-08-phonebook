@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0;
+    padding: 8px;
+    
+    
+}
+.name {
+  color: #fff;
+  display: block;
+margin: auto;
+  padding: 8px;
+  font-size: 15px;
+}
+.button {
+  display: block;
+margin: auto;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  border: 1px solid red;
+
+  color: red;
+  
+}
