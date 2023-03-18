@@ -18,7 +18,7 @@ import { getFilterContacts } from 'redux/contacts/contacts-selectors';
 import { getFilter } from 'redux/filter/filter-selectors';
 import { setFilter } from 'redux/filter/filter-slice';
 
-export default function Contacts() {
+const  Contacts = () => {
   const contacts = useSelector(store => store.contacts.items);
   const visibleContacts = useSelector(getFilterContacts);
   const filter = useSelector(getFilter);
@@ -52,7 +52,7 @@ export default function Contacts() {
   return (
     <>
       <Form onSubmit={onAddContact} />
-      {contacts.length > 0 && (
+      {contacts.length > 0 ? (
         <>
           <Filter
             value={filter}
@@ -65,7 +65,9 @@ export default function Contacts() {
             onClick={onDeleteContact}
           />
         </>
-      )}
+      ) : (<p>No contacts yet!</p>)} 
     </>
   );
 }
+
+export default Contacts;
