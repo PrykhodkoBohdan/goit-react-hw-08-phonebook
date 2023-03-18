@@ -1,7 +1,7 @@
-// import css from './registerForm.module.css'
+import css from "../Forms/Forms.module.css"
 
 const Button = ({children, type = 'submit'}) => {
-  return <button type={type}>{children}</button>
+  return <button className={css.button} type={type}>{children}</button>
 }
 
 export default Button;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import css from './PhoneBook.module.css';
+import css from './contacts.module.css';
 
-import initialState from 'components/PhoneBook/initialState';
+import initialState from 'components/Contacts/initialState';
 
 function Form({ onSubmit }) {
   const [state, setState] = useState({ ...initialState });

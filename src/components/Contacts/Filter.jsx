@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './PhoneBook.module.css';
+import css from './contacts.module.css';
 
 const Filter = ({value, onChange}) => (
   <label className={css.labelFilter}> Find contacts by name

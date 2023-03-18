@@ -20,12 +20,13 @@ margin-left: auto;
 .form {
   display: flex;
   justify-content: center;
+  margin-bottom: 10%;
 }
 
 .label {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
-  color: rgb(30, 0, 255);
+  color:   rgb(251 255 0);
 
   margin-right: 20px;
   cursor: pointer;
@@ -34,7 +35,8 @@ margin-left: auto;
 .input {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid rgb(30, 0, 255);
+  border: 1px solid white;
+  border-radius: 5px;
   padding: 5px;
   margin-left: 20px;
 
@@ -42,39 +44,44 @@ margin-left: auto;
   monospace;
   color: #fff;
 }
-
-.label:hover,
-.label:focus {
-  color: #fff;
-
+.input:hover,
+.input:focus {
+  outline: none;
+  color:rgb(251 255 0);
+  border: 1px solid blue ;
+ 
 }
+
+
 .button {
   padding: 5px;
+  border-radius: 5px;
   background-color: transparent;
-  border: 1px solid rgb(30, 0, 255);
+  border: 1px solid white;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
-  color: rgb(30, 0, 255);
+  color: white;
 
   cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid blue;
+  color: rgb(251 255 0);
 }
 
 .labelFilter {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 40px;
   margin-top: 40px;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
   color: #fff;
 
-  border: 1px solid #fff;
+  border: none;
 
 }
 
@@ -82,5 +89,6 @@ margin-left: auto;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
   color: #fff;
+  list-style: none;
   margin-bottom: 10px;
 }

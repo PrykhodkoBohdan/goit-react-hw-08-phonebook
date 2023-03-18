@@ -12,7 +12,7 @@ const Loader = ({text}) => {
     height="80"
     width="80"
     radius="9"
-    color="red"
+    colors={['blue', 'blue', 'blue']}
     ariaLabel="loading"
   />
   <h2 className={css.title}>{text}</h2>

@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import '../../index.css'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Form from './Form';
-import PhoneBookList from './PhoneBookList';
+import ContactsList from './ContactsList';
 import Filter from './Filter';
 
 import {
@@ -16,7 +18,7 @@ import { getFilterContacts } from 'redux/contacts/contacts-selectors';
 import { getFilter } from 'redux/filter/filter-selectors';
 import { setFilter } from 'redux/filter/filter-slice';
 
-export default function PhoneBook() {
+export default function Contacts() {
   const contacts = useSelector(store => store.contacts.items);
   const visibleContacts = useSelector(getFilterContacts);
   const filter = useSelector(getFilter);
@@ -29,14 +31,23 @@ export default function PhoneBook() {
   const onAddContact = ({ name, number }) => {
     for (let i = 0; i < contacts.length; i++) {
       if (contacts[i].name === name) {
-      return alert("we are have problem");
+        toast.error('Contact with such name already exists');
+        return;
       }
     }
-    dispatch(fetchAddContact({ name, number }));
+    dispatch(fetchAddContact({ name, number })).then(() => {
+      toast.success('Contact added successfully');
+    }).catch(() => {
+      toast.error('Error occurred while adding a contact');
+    });
   };
-
+  
   const onDeleteContact = id => {
-    dispatch(fetchDeleteContact(id));
+    dispatch(fetchDeleteContact(id)).then(() => {
+      toast.info('Contact deleted successfully');
+    }).catch(() => {
+      toast.error('Error occurred while deleting a contact');
+    });
   };
   return (
     <>
@@ -47,7 +58,7 @@ export default function PhoneBook() {
             value={filter}
             onChange={({ target }) => dispatch(setFilter(target.value))}
           />
-          <PhoneBookList
+          <ContactsList
             contacts={visibleContacts}
             type="button"
             text="delete"

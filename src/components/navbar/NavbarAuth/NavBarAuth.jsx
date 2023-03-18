@@ -13,10 +13,10 @@ const isActive = ({ isActive }) => {
 };
 const NavBarAuth = () => {
   const isLogin = useSelector(isUserLogin);
-console.log(items)
+
   const filteredItems = !isLogin
     ? items.filter(( item) => {
-      console.log(item.private)
+
       return !item.private})
     : items.filter(( item ) => item.private);
   const elements = filteredItems.map(({ id, text, link }) => (
