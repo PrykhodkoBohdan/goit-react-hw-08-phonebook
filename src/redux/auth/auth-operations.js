@@ -1,6 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import * as api from '../../services/auth-api';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const signup = createAsyncThunk(
   'auth/signup',
   async (data, { rejectWithValue }) => {
@@ -9,6 +12,7 @@ export const signup = createAsyncThunk(
 
       return result;
     } catch ({ response }) {
+      toast.error('Oops, something went wrong, try again!');
       return rejectWithValue(response);
     }
   }
@@ -19,8 +23,12 @@ export const login = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const result = await api.login(data);
+      toast.success(`Welcome ${result.user.name}!`)
       return result;
+      
+      
     } catch ({ response }) {
+      toast.error('Check the correctness of the entered data!')
       return rejectWithValue(response);
     }
   }
