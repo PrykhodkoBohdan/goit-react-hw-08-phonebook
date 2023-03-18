@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <App />
-      <ToastContainer position="top-center"
+      <ToastContainer position="top-right"
 autoClose={2000}
 hideProgressBar
 newestOnTop={false}
