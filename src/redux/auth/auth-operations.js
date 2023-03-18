@@ -9,7 +9,7 @@ export const signup = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const result = await api.signup(data);
-
+      toast.success('Congratulations, you have successfully registered!');
       return result;
     } catch ({ response }) {
       toast.error('Oops, something went wrong, try again!');
