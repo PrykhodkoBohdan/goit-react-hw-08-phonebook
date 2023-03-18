@@ -1,9 +1,9 @@
-import PhoneBook from "components/PhoneBook/PhoneBook";
+import Contacts from "components/Contacts/Contacts";
 
 const ContactsPage = () => {
 
   return (
-    <PhoneBook/>
+    <Contacts/>
   )
 }
 

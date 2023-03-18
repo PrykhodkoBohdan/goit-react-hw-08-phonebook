@@ -19,6 +19,7 @@ const HomePage = lazy(() => import('./pages/HomePage/HomePage'))
 const UserRoute = () => {
   return (
     <Provider store={store}>
+
       <PersistGate loading={null} persistor={persistor}>
         <AuthProvider>
           <BrowserRouter basename='/goit-react-hw-08-phonebook'>
