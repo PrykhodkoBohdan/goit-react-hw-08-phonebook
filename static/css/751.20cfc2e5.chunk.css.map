@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/751.20cfc2e5.chunk.css","mappings":"AAAA,wBAGI,aAAqB,CADrB,iBAEJ","sources":["components/Container/Container.module.css"],"sourcesContent":[".title{\n\n    text-align: center;\n    color: rgb(30, 0, 255)\n}"],"names":[],"sourceRoot":""}
